@@ -1,0 +1,81 @@
+form {
+  text-align: center;
+  width: 100%;
+}
+form > input {
+  border: 0;
+  width: 50%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  color: gray;
+}
+form > button {
+  padding: 0.4rem 1.6rem;
+  border: 0;
+  background: black;
+  margin-left: 2rem;
+  color: white;
+  font-weight: 600;
+}
+#habitOuterContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.link {
+  text-decoration: none;
+  padding: 0.7rem 0.5rem;
+  background: yellowgreen;
+  color: red;
+  margin: 1rem 0rem;
+}
+.habits {
+  display: flex;
+  margin: 1rem 0rem;
+  width: 60%;
+  justify-content: space-between;
+  padding: 1vw;
+  align-items: center;
+  border-radius: 1rem;
+  border: 2px solid black;
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  background: linear-gradient(45deg, bisque, aquamarine);
+}
+.habits > div button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: green;
+  border: 0;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0px 0px 5px 2px black;
+}
+#favourite {
+  background: red;
+  box-shadow: 0px 0px 5px 2px green;
+}
+#delete {
+  background: blue;
+
+  box-shadow: 0px 0px 5px 2px white;
+}
+
+.habits > div button:hover {
+  transform: scale(1.1);
+  color: black;
+}
+
+@media screen and (max-width: 500px) {
+  .habits {
+    width: 96%;
+  }
+  .habits > div button {
+    padding: 0.5rem 0.5rem;
+  }
+}

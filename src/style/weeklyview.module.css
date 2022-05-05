@@ -1,0 +1,39 @@
+table {
+  border: 1px solid red;
+}
+th,
+td {
+  background: lightseagreen;
+  padding: 1rem 1rem;
+  color: gainsboro;
+  cursor: pointer;
+  text-align: center;
+}
+.link {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  text-shadow: 0 0 5px red;
+  box-shadow: 0 0 10px 9px inset;
+}
+.none {
+  color: red;
+}
+.notDone {
+  color: lightgreen;
+}
+.done {
+  color: green;
+}
+
+table tr[black] th {
+  color: black;
+}
+@media screen and (max-width: 500px) {
+  th,
+  td {
+    padding: 1rem 0.5rem;
+  }
+}
