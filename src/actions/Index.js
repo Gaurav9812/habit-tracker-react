@@ -21,11 +21,6 @@ export function habitsFromLocalStorage(habit) {
     habit,
   };
 }
-export function increaseHabitId() {
-  return {
-    type: INCREASE_HABIT_ID,
-  };
-}
 export function increaseStatusId() {
   return {
     type: INCREASE_STATUS_ID,

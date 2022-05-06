@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import { applyMiddleware, createStore } from "redux";
 import rootReducer from "./reducers/Index";
 import { ToastContainer } from "react-toastify";
+import { HashRouter as Router } from "react-router-dom";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -24,7 +25,9 @@ ReactDOM.render(
   <React.StrictMode>
     <ToastContainer />
     <Provider store={store}>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

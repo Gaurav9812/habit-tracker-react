@@ -1,10 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import {
-  changeStatusWeeklyView,
-  habitsFromLocalStorage,
-} from "../actions/Index";
+import { changeStatusWeeklyView } from "../actions/Index";
 import styles from "../style/weeklyview.module.css";
 
 class WeeklyView extends React.Component {

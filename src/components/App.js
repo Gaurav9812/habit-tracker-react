@@ -1,15 +1,9 @@
 import React from "react";
-import {
-  addHabits,
-  ADD_HABITS_FROM_LOCALSTORAGE,
-  habitsFromLocalStorage,
-  increaseHabitId,
-  increaseStatusId,
-} from "../actions/Index";
+import { habitsFromLocalStorage } from "../actions/Index";
 import { connect } from "react-redux";
 import DailyView from "./DailyView";
 import WeeklyView from "./WeeklyView";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -38,13 +32,11 @@ class App extends React.Component {
     }
     return (
       <div className="app">
-        <Router>
-          <h1>HABIT TRACKER</h1>
-          <Routes>
-            <Route path="/" element={<DailyView />} />
-            <Route path="/weeklyView" element={<WeeklyView />} />
-          </Routes>
-        </Router>
+        <h1>HABIT TRACKER</h1>
+        <Routes>
+          <Route path="/" element={<DailyView />} />
+          <Route path="/weeklyView" element={<WeeklyView />} />
+        </Routes>
       </div>
     );
   }
