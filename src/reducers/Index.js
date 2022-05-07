@@ -36,8 +36,11 @@ export default function habits(state = initialHabitState, action) {
       ha.habits.forEach((habit) => {
         let todayDate = new Date();
         let lastDate = new Date(habit.days[6].date);
-        let start = new Date();
-        start.setDate(lastDate.getDate() + 1);
+        let start = new Date(lastDate.getTime() + 86400000);
+
+        console.log("Start date ", start);
+        console.log("today date ", todayDate);
+
         while (start <= todayDate) {
           let da = {
             date: start.toString().substring(0, 15),
@@ -47,7 +50,7 @@ export default function habits(state = initialHabitState, action) {
           ha.statusId += 1;
           habit.days.shift();
           habit.days.push(da);
-          start.setDate(start.getDate() + 1);
+          start.setTime(start.getTime() + 86400000);
         }
       });
 
